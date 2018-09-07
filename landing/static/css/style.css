@@ -1,9 +1,9 @@
-* {
-	padding: 0 !important;
-	margin: 0 !important;
+body {
+	font-family: 'RobotoRegular', sans-serif;	
 }
 
 header {
+	
 	height: 100vh;
 	width: 100%;
 	background: url(../uploads/bg_fone_1.png) no-repeat;
@@ -13,10 +13,11 @@ header {
 	z-index: 1;
 }
 
+
 #mask {
 	position: absolute;
 	z-index: 2;
-	background-color: rgba(0,0,0,0.64);
+	background-color: rgba(0,0,0,0.74);
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -24,12 +25,90 @@ header {
 	right: 0;
 }
 
+#mask_blick {
+	position: absolute;
+	z-index: 3;
+	background: url(../uploads/blick.png) no-repeat;
+	-webkit-background-size: 35%;
+	background-size: 35%;
+	background-position: 0 bottom;
+	width: 100%;
+	height: 100%;
+	bottom: 0;	
+}
+
+
 .top_head {
+	width: 100%;
 	position: relative;
-	z-index: 3
+	z-index: 4;
+
 
 }
 
-.top_head h1 {
+.my-container {
+	width: 90%;
+	margin: auto;
+}
+
+.top_head .row {
+	width: 100%;
+	align-items: center;
+}
+
+.top_head #menu ul {
+	list-style-type: none;
+	display: flex;
+}
+
+.top_head #menu ul li {
+	padding: 0 20px;
+}
+
+.top_head .contact {
+	display: flex;
+	align-items: center;
+}
+.top_head .social-links ul {
+	display: flex;
+}
+.top_head #menu ul li a {
 	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	text-transform: uppercase;
+	padding: 10px;
+	border-bottom: 1px solid transparent;
+
 }
+
+.top_head .number p {
+	color: #fff;
+	position: relative;
+	top: 13px;
+	left: 20px;
+}
+.top_head #menu ul li a.active {
+	background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #765619), color-stop(0.4, #fdf199), color-stop(1, #765619) );
+	background-image: gradient(linear, left top, right top, color-stop(0, #765619), color-stop(0.4, #fdf199), color-stop(1, #765619) );
+	color:transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	border-bottom: 1px solid #b3801e;
+}
+
+.top_head .social-links ul {
+	list-style-type: none;
+}
+
+
+@media (min-width: 576px) { ... }
+
+// Средние девайсы («таблетки», >= 768px)
+@media (min-width: 768px) { ... }
+
+// Большие девайсы (десктопы, >= 992px)
+@media (min-width: 992px) { ... }
+
+// Экстрабольшие девайсы (большие десктопы, >= 1200px)
+@media (min-width: 1200px) { ... }
