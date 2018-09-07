@@ -1,0 +1,35 @@
+* {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+header {
+	height: 100vh;
+	width: 100%;
+	background: url(../uploads/bg_fone_1.png) no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+}
+
+#mask {
+	position: absolute;
+	z-index: 2;
+	background-color: rgba(0,0,0,0.64);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.top_head {
+	position: relative;
+	z-index: 3
+
+}
+
+.top_head h1 {
+	color: #fff;
+}
