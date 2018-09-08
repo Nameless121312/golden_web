@@ -11,6 +11,7 @@ header {
 	background-size: cover;
 	position: relative;
 	z-index: 1;
+	overflow: hidden;	
 }
 
 
@@ -44,6 +45,7 @@ header {
 	z-index: 4;
 
 
+
 }
 
 .my-container {
@@ -59,15 +61,15 @@ header {
 .top_head #menu ul {
 	list-style-type: none;
 	display: flex;
+	justify-content: space-between;
 }
 
-.top_head #menu ul li {
-	padding: 0 20px;
-}
+
 
 .top_head .contact {
 	display: flex;
 	align-items: center;
+	justify-content: flex-end;
 }
 .top_head .social-links ul {
 	display: flex;
@@ -75,9 +77,9 @@ header {
 .top_head #menu ul li a {
 	color: #fff;
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 16px;
 	text-transform: uppercase;
-	padding: 10px;
+	padding: 10px 5px;
 	border-bottom: 1px solid transparent;
 
 }
@@ -86,8 +88,12 @@ header {
 	color: #fff;
 	position: relative;
 	top: 13px;
-	left: 20px;
+	left: 41px;
+	font-size: 14px;
 }
+
+
+
 .top_head #menu ul li a.active {
 	background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #765619), color-stop(0.4, #fdf199), color-stop(1, #765619) );
 	background-image: gradient(linear, left top, right top, color-stop(0, #765619), color-stop(0.4, #fdf199), color-stop(1, #765619) );
@@ -102,13 +108,118 @@ header {
 }
 
 
-@media (min-width: 576px) { ... }
+#menu_butt {
+	display: none;
+}
 
-// Средние девайсы («таблетки», >= 768px)
-@media (min-width: 768px) { ... }
+@media (max-width: 1200px) {
+	.top_head #menu ul li a {
+		font-size: 14px;
+		padding: 10px 3px;
+		border-bottom: 1px solid transparent;
 
-// Большие девайсы (десктопы, >= 992px)
-@media (min-width: 992px) { ... }
+	}
 
-// Экстрабольшие девайсы (большие десктопы, >= 1200px)
-@media (min-width: 1200px) { ... }
+
+}
+@media (max-width: 992px) {
+	.row {
+		margin: 0
+	}
+
+	.my-container {
+		width: 98%;
+		margin: auto;
+	}
+
+
+
+}
+@media (max-width: 768px) {
+
+	.top_head #menu ul {
+		list-style-type: none;
+		display: block;
+		justify-content: space-between;
+		padding: 0;
+	}
+	.top_head #menu {
+		transform: translateY(100%);
+	}
+	.top_head {
+		padding-top: 20px;
+	}
+
+	
+	.top_head  .row .col-2:first-child {
+		flex: 0 0 100%;
+		max-width: 100%;
+		position: relative;
+	}
+
+	.top_head  .row .col-2:last-child {
+		flex: 0 0 100%;
+		max-width: 100%;
+		display: none;
+	}
+	#menu_butt {
+		display: block;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		z-index: 1001;
+		
+	}
+	#menu_butt a {
+		background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #765619), color-stop(0.4, #fdf199), color-stop(1, #765619) );
+		background-image: gradient(linear, left top, right top, color-stop(0, #765619), color-stop(0.4, #fdf199), color-stop(1, #765619) );
+		color:transparent;
+		-webkit-background-clip: text;
+		background-clip: text;
+		font-weight: bold;
+	}
+	.top_head  .row .col-8 {
+		flex: 0 0 100%;
+		max-width: 100%;
+		height: 100vh;
+		top: 0;
+		position: absolute;
+		text-align: center;
+		background-color: rgba(0,0,0,0.5);
+		z-index: 1000;
+		transform: translateX(-200%);
+		transition: all .4s;
+
+	}
+
+	.top_head  .row .col-8.active {
+
+		transform: translateX(0);
+
+
+	}
+
+
+	.top_head #menu ul li {
+		margin-bottom: 10px;
+	}
+
+	.top_head #menu ul li a {
+		font-size: 16px;
+		border: none;
+
+	}
+	.top_head #menu ul li a.active {
+
+	border-bottom: none;
+}
+
+
+}
+@media (min-width: 576px) {
+
+}
+
+
+
+
